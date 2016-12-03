@@ -1,0 +1,57 @@
+import java.awt.*;
+import java.awt.event.*;
+import java.awt.GridLayout;
+import java.awt.FlowLayout;
+import javax.swing.*;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+public class Stuff {
+     private JButton player1Button, pLayer2Button, player3Button, player4Button;
+    private JPanel playerPanel;
+    private JLabel gameName;
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        JFrame frame = new JFrame("Title Screen");
+      // JPanel playerPanel = new JPanel();
+       JButton player1Button = new JButton("Player 1");
+       JButton player2Button = new JButton("Player 2");
+       JButton player3Button = new JButton("Player 3");
+       JButton player4Button = new JButton("Player 4");
+       JLabel gameName = new JLabel("Yahtzee");
+      
+    frame.setLayout(null);
+    
+    // This is adding the title of the game onto the top of the screen
+    frame.add(gameName);
+    gameName.setBounds(325,50,50,50);
+    
+    // This is adding the JButtons onto the JFrame
+    frame.add(player1Button);
+    frame.add(player2Button);
+    frame.add(player3Button);
+    frame.add(player4Button);
+    
+    //playerPanel.setLayout(new FlowLayout());
+    //playerPanel.setBackground(Color.);
+    
+    // This is setting the precision of the JButton (x,y,width,height)
+    player1Button.setBounds(150,250,100,100);
+    player2Button.setBounds(250,250,100,100);
+    player3Button.setBounds(350,250,100,100);
+    player4Button.setBounds(450,250,100,100);
+    //playerPanel.setSize(0,0);
+    
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setSize(700,500);
+    frame.setLocationRelativeTo(null);
+    frame.setVisible(true);
+    }
+    
+}
